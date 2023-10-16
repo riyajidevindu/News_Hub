@@ -24,13 +24,41 @@ const Menu = () => {
 
   return (
     <div className="bg-black w-[200px] z-10 md:right-48 flex flex-col items-start absolute top-12 right-6 rounded-md p-4 space-y-4">
-      {!user && <h3 className="text-white text-sm hover:text-gray-500 cursor-pointer"><Link to="/login">Login</Link></h3>}
-      {!user && <h3 className="text-white text-sm hover:text-gray-500 cursor-pointer" ><Link to="/register">Register</Link></h3>}
-      {user && <h3 className="text-white text-sm hover:text-gray-500 cursor-pointer" ><Link to={"/profile/"+user._id}>Profile</Link></h3>}
-      {user && <h3 className="text-white text-sm hover:text-gray-500 cursor-pointer" ><Link to="/write">Write</Link></h3>}
-      {user && <h3 className="text-white text-sm hover:text-gray-500 cursor-pointer" ><Link to={"/mynews/"+user._id}>My News</Link></h3>}
-      {user && <h3 onClick={handleLogout} className="text-white text-sm hover:text-gray-500 cursor-pointer" >Logout</h3>}
-    </div>
+  {!user && (
+    <h3 className="text-white text-sm hover:text-gray-500 cursor-pointer">
+      <Link to="/login" className="transition duration-300 ease-in-out transform hover:scale-105">Login</Link>
+    </h3>
+  )}
+  {!user && (
+    <h3 className="text-white text-sm hover:text-gray-500 cursor-pointer">
+      <Link to="/register" className="transition duration-300 ease-in-out transform hover:scale-105">Register</Link>
+    </h3>
+  )}
+  {user && (
+    <h3 className="text-white text-sm hover:text-gray-500 cursor-pointer">
+      <Link to={"/profile/" + user._id} className="transition duration-300 ease-in-out transform hover:scale-105">Profile</Link>
+    </h3>
+  )}
+  {user && (
+    <h3 className="text-white text-sm hover:text-gray-500 cursor-pointer">
+      <Link to="/write" className="transition duration-300 ease-in-out transform hover:scale-105">Write</Link>
+    </h3>
+  )}
+  {user && (
+    <h3 className="text-white text-sm hover:text-gray-500 cursor-pointer">
+      <Link to={"/mynews/" + user._id} className="transition duration-300 ease-in-out transform hover:scale-105">My News</Link>
+    </h3>
+  )}
+  {user && (
+    <h3
+      onClick={handleLogout}
+      className="text-white text-sm hover:text-gray-500 cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"
+    >
+      Logout
+    </h3>
+  )}
+</div>
+
   )
 }
 

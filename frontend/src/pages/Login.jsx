@@ -30,7 +30,58 @@ const Login = () => {
   }
   return (
     <>
-    <div className="flex items-center justify-between px-6 md:px-[200px] py-4">
+       <div className="min-h-screen bg-gray-100 flex flex-col justify-center">
+      <div className="flex items-center justify-between px-6 md:px-20 py-4">
+        <h1 className="text-2xl md:text-3xl font-extrabold text-indigo-600">
+          <Link to="/">NewsHub</Link>
+        </h1>
+        <h3>
+          <Link to="/register" className="text-indigo-600">
+            Register
+          </Link>
+        </h3>
+      </div>
+      <div className="flex justify-center items-center h-[80vh]">
+        <div className="bg-white rounded-lg p-8 shadow-md w-[80%] md:w-[25%]">
+          <h1 className="text-2xl md:text-3xl font-bold text-left mb-6">
+            Log in to your account
+          </h1>
+          <input
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full px-4 py-2 border-2 border-indigo-300 outline-none rounded-md mb-4"
+            type="text"
+            placeholder="Enter your email"
+          />
+          <input
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full px-4 py-2 border-2 border-indigo-300 outline-none rounded-md mb-4"
+            type="password"
+            placeholder="Enter your password"
+          />
+          <button
+            onClick={handleLogin}
+            className="w-full px-4 py-3 text-lg font-bold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700"
+          >
+            Log in
+          </button>
+          {error && (
+            <p className="text-red-500 text-sm mt-2">Something went wrong</p>
+          )}
+          <div className="mt-4 flex justify-center items-center space-x-3">
+            <p>New here?</p>
+            <p className="text-indigo-600 hover:underline">
+              <Link to="/register">Register</Link>
+            </p>
+          </div>
+        </div>
+      </div>
+      <Footer/>
+    </div>
+ 
+
+
+
+    {/*<div className="flex items-center justify-between px-6 md:px-[200px] py-4">
     <h1 className="text-lg md:text-xl font-extrabold"><Link to="/">NewsHub</Link></h1>
     <h3><Link to="/register">Register</Link></h3>
     </div>
@@ -47,7 +98,7 @@ const Login = () => {
          </div>
        </div>
     </div>
-    <Footer/>
+  <Footer/>*/}
     </>
     
   )
