@@ -21,7 +21,7 @@ const Home = () => {
     setLoader(true);
     try {
       const res = await axios.get(URL + "/api/newss/" + search);
-      setPosts(res.data);
+      setPosts(res.data.reverse());
       if (res.data.length === 0) {
         setNoResults(true);
       } else {
@@ -52,7 +52,7 @@ const Home = () => {
           <Carousel showArrows autoPlay showThumbs={false}>
             {posts.map((post) => (
               <div key={post._id}>
-                <img 
+                <img className="object-cover rounded-lg text-sm"
                   src={IMAGEFOLDER + post.photo} // Use the URL of your news post images
                   alt={post.title}
                   style={{ maxWidth: '60%', maxHeight: '50%' }}

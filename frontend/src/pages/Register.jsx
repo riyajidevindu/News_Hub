@@ -42,7 +42,7 @@ const Register = () => {
         </p>
       </div>
       <div className="flex justify-center items-center h-[80vh]">
-        <div className="bg-white rounded-lg p-8 shadow-md w-[80%] md:w-[25%]">
+        <div className="bg-white rounded-lg p-8 shadow-md w-[80%] md:w-[35%]">
           <h1 className="text-2xl md:text-3xl font-bold text-left mb-6">
             Create an account
           </h1>
