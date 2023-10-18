@@ -104,7 +104,7 @@ const EditNews = () => {
         <div className="flex flex-col">
           <div className="flex items-center space-x-4 md:space-x-8">
             <input value={category} onChange={(e)=>setCategory(e.target.value)} type="text" placeholder="Enter news category" className="px-4 py-2 outline-none rounded-md" />
-            <button onClick={addCategory} className="bg-black text-white px-4 py-2 font-semibold rounded-md cursor-pointer">Add</button>
+            <div onClick={addCategory} className="bg-black text-white px-4 py-2 font-semibold rounded-md cursor-pointer">Add</div>
           </div>
           <div className="flex px-4 mt-3">
             {categories?.map((c, i) => (

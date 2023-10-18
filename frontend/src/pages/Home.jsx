@@ -49,7 +49,7 @@ const Home = () => {
         ) : !noResults ? (
           <>
           <div>
-          <Carousel showArrows autoPlay showThumbs={false}>
+          <Carousel showArrows autoPlay showThumbs={false} interval={5000} transitionTime={500} stopOnHover>
             {posts.map((post) => (
               <div key={post._id}>
                 <img className="object-cover rounded-lg text-sm"
