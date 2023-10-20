@@ -19,7 +19,6 @@ const Navbar = () => {
   const { user } = useContext(UserContext);
 
   useEffect(() => {
-    // Update the current date and time every second
     const interval = setInterval(() => {
       const now = new Date();
       setCurrentDateTime(now.toLocaleString());
